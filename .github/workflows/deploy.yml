@@ -41,6 +41,7 @@ jobs:
       - name: build
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
+          VITE_DEPLOY_TARGET: 'github-pages'
         run: |
           pnpm run build
       - name: Setup Pages
