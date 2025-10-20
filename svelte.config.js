@@ -17,7 +17,7 @@ const config = {
 			}
 		},
 		paths: {
-			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+			base: process.env.VITE_DEPLOY_TARGET === 'github-pages' ? '' : process.env.BASE_PATH
 		}
 	},
 	preprocess: vitePreprocess()
